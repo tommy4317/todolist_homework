@@ -1,0 +1,157 @@
+/*Remove basic styling*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #39a6a3; /*color hunt*/
+  color: #f0a500;
+  font-family: "EB Garamond", sans-serif; /*from google fonts*/
+  min-height: 100vh;
+} 
+
+header {
+  font-size: 1.25rem;
+}
+
+/*Centering header and form*/
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+
+/* Plus button adding newtodo items*/
+form button {
+  color: rgb(218, 54, 32);
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: rgb(218, 54, 32);
+  color: white;
+}
+
+/*ToDo list*/
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*the ul*/
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+/*todo items box*/
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease; /*works with the line-through checkmark*/
+}
+
+/*pushes checkmark and trash icons next to each other to the right*/
+.todo li {
+  flex: 1;
+}
+
+/*checkmark and trashcan buttons*/
+.trash-btn,
+.complete-btn {
+  background: rgb(255, 187, 0);
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/*different background for the checkmark button*/
+.complete-btn {
+  background: #04009a;
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+/*Opens up the buttons and makes them easier to click*/
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+/*lines out the todo item*/
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/*fall away animation for the checkmarked todo item*/
+.fall {
+  transform: translateY(8rem) rotateZ(20deg); /*the twist and fall*/
+  opacity: 0;
+}
+
+select {
+  /*Removes the styling from the slect div, fliter through area*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+/*styling the div area*/
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/*colors and such*/
+select {
+  color: rgb(218, 54, 32);
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem; /*helps with the arrow position*/
+}
+
+/*adds the arrow to the filter biutton and styles it*/
+.select::after {
+  content: "\25BC"; /*unicode arrow icon*/
+  position: absolute; /*puts it inside the box*/
+  background:lightgoldenrodyellow; /*making it stand out a little*/
+  color: rgb(218, 54, 32);
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transform: all 0.3s ease;
+}
+
+.select:hover::after {
+  background:rgb(218, 54, 32);
+  color: white;
+}

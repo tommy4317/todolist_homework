@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts link-->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    <!-- Font Awsome link (for the icons)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous"/>
+    <!--CSS link-->
+    <link rel="stylesheet" href="./style.css">
+    <title>Tommy's ToDo List</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Things ToDo</h1><!--Title-->
+    </header>
+    <!--The ToDo list form-->
+    <form>
+        <input type="text" class="todo-input"/><!--input box-->
+        <button class="todo-button" type="submit"><!--submit button-->
+            <i class="fas fa-plus-square"></i><!--font awsome submit button-->
+        </button>
+        <!--Filters throught the to items as listed below-->
+        <div class="select">
+            <select name="todos" class="filter-todo"><!--Tab to filter through todo's and show them-->
+                <option value="all">All</option><!--show all todo's-->
+                <option value="completed">Completed</option><!--show just completed todo's-->
+                <option value="uncompleted">Uncompleted</option><!--show just uncompleted todo's-->
+            </select>
+        </div>
+    </form>
+    <div class="todo-container"><!--Where we see the todo items-->
+        <ul class="todo-list"></ul> <!--linked to (const todoList = document.querySelector(".todo-list"))-->
+    </div>
+
+    <!--Javascript link-->
+    <script src="./app.js"></script>
+</body>
+
+</html>
